@@ -27,10 +27,14 @@ const Edit = () => {
         const product = await getDoc( doc(db, "heroe", id) )
         if(product.exists()) {
             //console.log(product.data())
-            setDescription(product.data().description)    
-            setStock(product.data().stock)
+            setNomreal(product.data().nomreal)    
+            setNomsuper(product.data().nomsuper)
+            SetEdad(product.data().edad)
+            setSexo(product.data().sexo)
+            setOrigen(product.data().origen)
+            setCaracteristicas(product.data().Caracteristicas)
         }else{
-            console.log('El producto no existe')
+            console.log('El Heroe no existe')
         }
     }
 
@@ -43,28 +47,178 @@ const Edit = () => {
         <div className='container'>
         <div className='row'>
             <div className='col'>
-                <h1>Edit Product</h1>
+                <h1>Editar Heroe</h1>
                  <form onSubmit={update}>
                     <div className='mb-3'>
-                        <label className='form-label'>Descripcion</label>
+                    <label className='form-label'>Nombre Real</label>
                         <input
-                            value={description}
-                            onChange={ (e) => setDescription(e.target.value)} 
+                            value={nomreal}
+                            onChange={ (e) => setNomreal(e.target.value)} 
                             type="text"
                             className='form-control'
                         />
                     </div>  
 
                     <div className='mb-3'>
-                        <label className='form-label'>Stock</label>
+                    <label className='form-label'>Nombre de Super Heroe</label>
                         <input
-                            value={stock}
-                            onChange={ (e)=> setStock(e.target.value)} 
-                            type="number"
+                            value={nomsuper}
+                            onChange={ (e) => setNomsuper(e.target.value)} 
+                            type="text"
                             className='form-control'
                         />                 
                     </div>  
-                    <button type='submit' className='btn btn-primary'>Update</button>
+
+                    <div className='mb-3'>
+                        <label className='form-label'>Edad</label>
+                        <input
+                            value={edad}
+                            onChange={ (e)=> SetEdad(e.target.value)} 
+                            type="number"
+                            className='form-control'
+                        />                 
+                    </div>
+
+                    <div >
+                    <label >sexo</label>
+                    <br></br>
+                        <input 
+                        onChange={ (e)=> setSexo(e.target.value)}
+                        type="radio" value="Masculino" name="sexo"
+                         /> Masculino
+                        <input 
+                        
+                        onChange={ (e)=> setSexo(e.target.value)}
+                        type="radio" value="Femenino" name="sexo"
+                        /> Femenino
+                        <input 
+                        
+                        onChange={ (e)=> setSexo(e.target.value)}
+                        type="radio" value="otro" name="sexo"
+                        /> Otro
+                    </div>
+
+                    <div >
+                    <label >origen</label>
+                    <br></br>
+                        <input 
+                
+                        onChange={ (e)=> setOrigen(e.target.value)}
+                        type="radio" value="Humano" name="origen"
+                         /> Humano
+                        <input 
+                        onChange={ (e)=> setOrigen(e.target.value)}
+                        type="radio" value="Extraterrestre" name="origen"
+                        /> Extraterrestre
+                        <input 
+                        
+                        onChange={ (e)=> setOrigen(e.target.value)}
+                        type="radio" value="Experimento Cientifico" name="origen"
+                        /> Experimento Cientifico
+                        <input 
+                        
+                        onChange={ (e)=> setOrigen(e.target.value)}
+                        type="radio" value="Mutante" name="sexo"
+                        /> Mutante
+                    </div>
+
+                    <div>
+                        <label>Caracteristicas</label>
+                        <br></br>
+                        <input 
+                        
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox" 
+                        value="Volador"/> Volador
+                        <input 
+                       
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox" 
+                        value="Velocidad"/> Velocidad
+                        <input 
+                        
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox" 
+                        value="Fuerza"/> Fuerza
+                        <input 
+                        
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox" 
+                        value="Mutante"/> Mutante
+                        <input 
+                        
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox" 
+                        value="Vision"/> Vision
+                        <input 
+                        
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox" 
+                        value="Oido"/> Oido
+                        <input 
+                       
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox" 
+                        value="Invulnerabilidad"/> Invulnerabilidad
+                        <input 
+                        
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox" 
+                        value="Telepatia"/> Telepatia
+                        <input 
+                       
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox" 
+                        value="Telequinesis"/> Telequinesis
+                        <input 
+                        
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox" 
+                        value="Rayos"/> Rayos
+                        <input 
+                        
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox" 
+                        value="Artes Marciales"/> Artes Marciales
+                        <input 
+                        
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox" 
+                        value="Inteligencia"/> Inteligencia
+                        <input 
+                        
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox" 
+                        value="Acrobata"/> Acrobata
+                        <input 
+                        
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox" 
+                        value="Armadura"/> Armadura
+                        <input 
+                        
+                        onChange={ (e)=> setCaracteristicas(e.target.value)}
+                        name="caracteristicas"
+                        type="checkbox"
+                        value="Tecnologia" /> Tecnologia
+                    </div>
+
+
+                    <button type='submit' className='btn btn-primary'>Actualizar</button>
                  </form>   
             </div>
         </div>

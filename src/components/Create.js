@@ -59,19 +59,18 @@ const Create = () => {
                     <label >sexo</label>
                     <br></br>
                         <input 
-                        value={sexo}
                         onChange={ (e)=> setSexo(e.target.value)}
-                        type="radio" name="sexo"
+                        type="radio" value="Masculino" name="sexo"
                          /> Masculino
                         <input 
-                        value={sexo}
+                        
                         onChange={ (e)=> setSexo(e.target.value)}
-                        type="radio" name="sexo"
+                        type="radio" value="Femenino" name="sexo"
                         /> Femenino
                         <input 
-                        value={sexo}
+                        
                         onChange={ (e)=> setSexo(e.target.value)}
-                        type="radio" name="sexo"
+                        type="radio" value="otro" name="sexo"
                         /> Otro
                     </div>
 
@@ -79,104 +78,118 @@ const Create = () => {
                     <label >origen</label>
                     <br></br>
                         <input 
-                        value={origen}
+                
                         onChange={ (e)=> setOrigen(e.target.value)}
-                        type="radio" name="origen"
+                        type="radio" value="Humano" name="origen"
                          /> Humano
                         <input 
-                        value={origen}
                         onChange={ (e)=> setOrigen(e.target.value)}
-                        type="radio" name="origen"
+                        type="radio" value="Extraterrestre" name="origen"
                         /> Extraterrestre
                         <input 
-                        value={origen}
+                        
                         onChange={ (e)=> setOrigen(e.target.value)}
-                        type="radio" name="origen"
+                        type="radio" value="Experimento Cientifico" name="origen"
                         /> Experimento Cientifico
                         <input 
-                        value={origen}
+                        
                         onChange={ (e)=> setOrigen(e.target.value)}
-                        type="radio" name="sexo"
+                        type="radio" value="Mutante" name="sexo"
                         /> Mutante
                     </div>
                     <div>
                         <label>Caracteristicas</label>
                         <br></br>
                         <input 
-                        value={Caracteristicas}
+                        
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Volador
+                        type="checkbox" 
+                        value="Volador"/> Volador
                         <input 
-                        value={Caracteristicas}
+                       
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Velocidad
+                        type="checkbox" 
+                        value="Velocidad"/> Velocidad
                         <input 
-                        value={Caracteristicas}
+                        
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Fuerza
+                        type="checkbox" 
+                        value="Fuerza"/> Fuerza
                         <input 
-                        value={Caracteristicas}
+                        
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Mutante
+                        type="checkbox" 
+                        value="Mutante"/> Mutante
                         <input 
-                        value={Caracteristicas}
+                        
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Vision
+                        type="checkbox" 
+                        value="Vision"/> Vision
                         <input 
-                        value={Caracteristicas}
+                        
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Oido
+                        type="checkbox" 
+                        value="Oido"/> Oido
                         <input 
-                        value={Caracteristicas}
+                       
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Invulnerabilidad
+                        type="checkbox" 
+                        value="Invulnerabilidad"/> Invulnerabilidad
                         <input 
-                        value={Caracteristicas}
+                        
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Telepatia
+                        type="checkbox" 
+                        value="Telepatia"/> Telepatia
                         <input 
-                        value={Caracteristicas}
+                       
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Telequinesis
+                        type="checkbox" 
+                        value="Telequinesis"/> Telequinesis
                         <input 
-                        value={Caracteristicas}
+                        
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Rayos
+                        type="checkbox" 
+                        value="Rayos"/> Rayos
                         <input 
-                        value={Caracteristicas}
+                        
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Artes Marciales
+                        type="checkbox" 
+                        value="Artes Marciales"/> Artes Marciales
                         <input 
-                        value={Caracteristicas}
+                        
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Inteligencia
+                        type="checkbox" 
+                        value="Inteligencia"/> Inteligencia
                         <input 
-                        value={Caracteristicas}
+                        
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Acrobata
+                        type="checkbox" 
+                        value="Acrobata"/> Acrobata
                         <input 
-                        value={Caracteristicas}
+                        
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Armadura
+                        type="checkbox" 
+                        value="Armadura"/> Armadura
                         <input 
-                        value={Caracteristicas}
+                        
                         onChange={ (e)=> setCaracteristicas(e.target.value)}
                         name="caracteristicas"
-                        type="checkbox" /> Tecnologia
+                        type="checkbox"
+                        value="Tecnologia" /> Tecnologia
                     </div>
                     <button type='submit' className='btn btn-primary'>Guardar</button>
                  </form>   

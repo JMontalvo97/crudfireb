@@ -86,7 +86,7 @@ const Show = () => {
                   <td>{heroes.edad}</td>
                   <td>{heroes.sexo}</td>
                   <td>{heroes.origen}</td>
-                  <td>{heroes.caracteristicas}</td>
+                  <td>{heroes.Caracteristicas}</td>
                   <td>
                     <Link to={`/edit/${heroes.id}`} className="btn btn-light"><i className="fa-solid fa-pencil"></i></Link>
                     <button onClick={ () => { confirmDelete(heroes.id) } } className="btn btn-danger"><i className="fa-solid fa-trash"></i></button>
